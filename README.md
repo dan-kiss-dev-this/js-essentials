@@ -1,0 +1,1 @@
+Use Live Server in VS Code. Open console log to run the HTML w/JS file, see commands in console log like orange1.throw() compared to the JS code
