@@ -8,6 +8,9 @@
     #addedSpan {
       color: blue;
     }
+    #sample {
+      border: 1px solid black;
+    }
   </style>
 </head>
 
@@ -26,6 +29,26 @@
     <option value="volkswagon">Volkswagon</option>
     <option value="ford">Ford</option>
   </select>
+  <hr>
+  <div>
+    Pick options to change the box below
+  </div>
+  <div>
+    <select id="background-color" name="boxDropdowns">
+      <option value="">Default background color</option>
+      <option value="lightblue">Light Blue</option>
+      <option value="lightgreen">Light Green</option>
+      <option value="lightgrey">Light Grey</option>
+    </select>
+    <select id="padding" name="boxDropdowns">
+      <option value="0">Default padding</option>
+      <option value="0 10px">10px to sides</option>
+      <option value="0 20px">20px</option>
+      <option value="0 30px">30px</option>
+    </select>
+    <button id="options">Use values selected for Sample</button>
+    <div id="sample">Sample</div>
+  </div>
   <script src="myapp.js"></script>
 </body>
 

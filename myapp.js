@@ -217,13 +217,28 @@ myP.style.cssText += "width: 200px;";
 
 let myElement = document.createElement('div');
 
-myElement.style.cssText = "padding: 10px; background-color: lightblue;"
+myElement.style.cssText = "padding: 10px; background-color: lightblue; margin: 20px;"
 
 myElement.innerText = "I created this element in JS, click for a greeting";
 
 myElement.onclick = function () { alert('Hello!') }
 
 document.body.append(myElement)
+
+//to change the color and padding of the div
+let elements = document.getElementsByName('boxDropdowns');
+function changeColor() {
+  for (let index = 0; index < elements.length; index++) {
+    let sample = document.getElementById('sample');
+    let cssProperty = elements[index].getAttribute('id');
+    let cssValue = elements[index].value;
+    sample.style[cssProperty] = cssValue;
+  }
+}
+
+document.getElementById('options').addEventListener('click', changeColor)
+
+
 
 
 
