@@ -4,12 +4,22 @@
 <head>
   <meta charset="utf-8">
   <title>Javascript Essentials</title>
+  <style>
+    #addedSpan {
+      color: blue;
+    }
+  </style>
 </head>
 
 <body>
   <h1>Javascript Essentials</h1>
   <h2>Use Live Server in VS Code. Open console log to run the HTML w/JS file, see commands in console log like
     orange1.throw() compared to the JS code</h2>
+  <h2 id="vanilla">Vanilla JS DOM manipulation is
+    <span data-content="interesting">so interesting</span>
+  </h2>
+  <p class="pClass">We want to target this p element</p>
+  <p>We want to also target this p element, see console log</p>
   <select name="cars" onclick="console.log('this is javascript being run')">
     <option value="volvo">Volvo</option>
     <option value="saab">Saab</option>

@@ -177,3 +177,55 @@ select1.addEventListener('click', ClickCallback);
 
 select1.removeEventListener('click', ClickCallback);
 
+//DOM notes to show h1 element in body
+console.log('show tag h1 with dom traversal', document.childNodes[1].childNodes[2].childNodes[1])
+
+//show all p tags, notes elements is plural so you get array
+console.log('grab all h2 tags', document.getElementsByTagName('h2'))
+
+//grab id of vanilla
+console.log('get vanilla id', document.getElementById('vanilla'))
+
+//grab all elements which match what I'm searching for
+console.log('get vanilla id', document.querySelectorAll('#vanilla, h1'))
+
+//return just the first h2 element
+console.log('return just the first h2 element', document.querySelector('h2'))
+
+//get span with attribute of data-* set to certain value and all p tags in the body
+console.log('get span with attribute of data-* set to certain value and all p tags in the body', document.querySelectorAll(' span[data-content="interesting"], body > p '))
+
+//see all properties of document vs see tags of document
+console.dir(document)
+console.log(document)
+
+let pClass = document.getElementsByClassName('pClass')[0];
+
+pClass.innerText += '. We changed the inner text of this element using JS';
+
+pClass.innerHTML += ', <span id="addedSpan"> so amazingly</span> '
+
+
+// we will style the myP element
+let myP = document.querySelector('.pClass')
+console.dir(myP)
+myP.style.color = "pink";
+
+//to use css string, note you want to do this in one go as we do 2 renders here
+myP.style.cssText = " background: lightblue; color: white;"
+myP.style.cssText += "width: 200px;";
+
+let myElement = document.createElement('div');
+
+myElement.style.cssText = "padding: 10px; background-color: lightblue;"
+
+myElement.innerText = "I created this element in JS, click for a greeting";
+
+myElement.onclick = function () { alert('Hello!') }
+
+document.body.append(myElement)
+
+
+
+
+
